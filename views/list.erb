@@ -1,0 +1,19 @@
+<h2>Contacts</h2>
+
+<% @list.each do |contact| %>
+  <h4><a href="/contact/<%= contact.id %>"><%= contact.last_name %>, <%= contact.first_name %></a></h4>
+<% end %>
+
+<h4>Add an item to the list:</h4>
+
+<form action="/" method="post">
+  <div class="form-group">
+    <label for="first_name">First name</label>
+    <input id="first_name" name="first_name" class="form-control" type="text">
+  </div>
+  <div class="form-group">
+    <label for="last_name">Last name</label>
+    <input id="last_name" name="last_name" class="form-control" type="text">
+  </div>
+  <button type="submit" class="btn">add contact</button>
+</form>
