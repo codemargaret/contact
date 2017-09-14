@@ -1,8 +1,14 @@
-<h2>Contacts</h2>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>list of item foods :)</title>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Contacts</h2>
 
-<% @list.each do |contact| %>
-  <h4><a href="/contact/<%= contact.id %>"><%= contact.last_name %>   <%= contact.first_name %></a></h4>
-<% end %>
+  <h4><a href="/contact/1">kitten   margaret</a></h4>
 
 <h4>Add an item to the list:</h4>
 
@@ -25,3 +31,7 @@
   </div>
   <button type="submit" class="btn">add contact</button>
 </form>
+
+    </div>
+  </body>
+</html>

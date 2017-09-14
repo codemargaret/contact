@@ -59,6 +59,12 @@ class Contact
     @@list.sort_by! {|contact| contact.last_name}
   end
 
-
-
+  def self.remove_contact(id)
+    @@list.map do |contact|
+      if contact.id == id
+        contact.first_name = ""
+        contact.last_name = ""
+      end
+    end
+  end
 end

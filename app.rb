@@ -31,3 +31,10 @@ post('/') do
   @list = Contact.sort()
   erb(:list)
 end
+
+post('/delete/:id') do
+  @contact = Contact.find(params[:id])
+  Contact.remove_contact(@contact.id)
+  erb(:contact)
+  redirect '/'
+end

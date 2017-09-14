@@ -38,4 +38,13 @@ describe("#id") do
       expect(Contact.all()).to(eq([contact3,contact2,contact1]))
     end
   end
+
+  describe(".remove_contact") do
+    it(" will delete a contact") do
+      contact1 = Contact.new({"first_name" => "Margaret", "last_name" => "Pineapple", "address" => "123 Main St", "phone_number" => "555-555-5555"})
+      contact1.save()
+      Contact.remove_contact(contact1.id)
+      expect(contact1.first_name).to(eq(""))
+    end
+  end
 end

@@ -2,3 +2,7 @@
 
 <h3><%= @contact.address %></h3>
 <h3><%= @contact.phone_number %></h3>
+
+<form action="/delete/<%= @contact.id %>" method="post">
+  <button type="submit" class="btn">delete contact</button>
+</form>

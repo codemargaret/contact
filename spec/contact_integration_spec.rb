@@ -29,7 +29,7 @@ set(:show_exceptions, false)
     it ('goes to the detail page') do
       visit('/')
       save_and_open_page
-      click_link("kitten, margaret")
+      click_link("kitten margaret")
       expect(page).to have_content('margaret')
     end
   end
