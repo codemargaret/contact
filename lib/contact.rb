@@ -1,6 +1,6 @@
 class Contact
   @@list = []
-  attr_accessor :first_name, :last_name
+  attr_accessor :first_name, :last_name, :address, :phone_number
   attr_reader :id
 
   # def first_name  reader attr
@@ -11,9 +11,18 @@ class Contact
   #   @first_name = first_name
   # end
 
-  def initialize(first_name, last_name)
-    @first_name = first_name
-    @last_name = last_name
+  # def initialize(first_name, last_name)
+  #   @first_name = first_name
+  #   @last_name = last_name
+  #   @id = @@list.length + 1
+  # end
+
+  def initialize(attributes)
+    @first_name = attributes.fetch("first_name")
+    @last_name = attributes.fetch("last_name")
+    @address = attributes.fetch("address")
+    @phone_number = attributes.fetch("phone_number")
+
     @id = @@list.length + 1
   end
 
