@@ -28,6 +28,6 @@ post('/') do
 
   contact = Contact.new(contact_list)
   contact.save()
-  @list = Contact.all()
+  @list = Contact.sort()
   erb(:list)
 end

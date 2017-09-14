@@ -26,9 +26,10 @@ set(:show_exceptions, false)
   # end
 
   describe('a contact', {:type => :feature}) do
-    it ('lists the first name') do
-      visit('/contact/1')
-      # click_link("berry, margaret")
+    it ('goes to the detail page') do
+      visit('/')
+      save_and_open_page
+      click_link("kitten, margaret")
       expect(page).to have_content('margaret')
     end
   end
